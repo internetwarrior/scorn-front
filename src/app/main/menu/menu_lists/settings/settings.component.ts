@@ -101,17 +101,17 @@ export class SettingsComponent {
   onSumbit() {
     // console.log(this.scoringForm.isValid());
     console.log(JSON.stringify(this.scoringForm.getDto()));
-    if (this.scoringForm.isValid()) {
-      this.http.post(this.url + "scoring/math", this.scoringForm.getDto).subscribe((res) => {
-        this.res = res;
-        this.step = 0;
-      });
-    } else {
-      this.notValid = true;
-      setTimeout(() => {
-        this.notValid = false;
-        console.log("hello");
-      }, 5000);
-    }
+    // if (this.scoringForm.isValid()) {
+    this.http.post(this.url + "scoring/math", this.scoringForm.getDto).subscribe((res) => {
+      this.res = res;
+      this.step = 0;
+    });
+    // } else {
+    //   this.notValid = true;
+    //   setTimeout(() => {
+    //     this.notValid = false;
+    //     console.log("hello");
+    //   }, 5000);
+    // }
   }
 }
