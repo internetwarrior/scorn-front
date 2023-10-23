@@ -102,7 +102,7 @@ export class SettingsComponent {
     // console.log(this.scoringForm.isValid());
     console.log(JSON.stringify(this.scoringForm.getDto()));
     // if (this.scoringForm.isValid()) {
-    this.http.post(this.url + "scoring/math", this.scoringForm.getDto).subscribe((res) => {
+    this.http.post(this.url + "scoring/math", this.scoringForm.getDto()).subscribe((res) => {
       this.res = res;
       this.step = 0;
     });
