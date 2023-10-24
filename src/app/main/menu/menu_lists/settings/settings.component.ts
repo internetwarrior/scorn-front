@@ -105,6 +105,7 @@ export class SettingsComponent {
     this.http.post(this.url + "scoring/math", this.scoringForm.getDto()).subscribe((res) => {
       this.res = res;
       this.step = 0;
+      this.setUserName();
     });
     // } else {
     //   this.notValid = true;
